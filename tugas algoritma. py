@@ -1,0 +1,35 @@
+# Program Evaluasi Mahasiswa (Versi Lengkap & Otomatis)
+
+print("=" * 40)
+print("     PROGRAM EVALUASI NILAI MAHASISWA     ")
+print("=" * 40)
+
+# Menentukan komponen nilai secara otomatis
+nilai_tugas = 90.0
+nilai_uts = 90.0
+nilai_uas = 90.0
+kehadiran = 95.0
+
+# Menampilkan rincian komponen nilai awal
+print(f"• Nilai Tugas          : {nilai_tugas}")
+print(f"• Nilai UTS            : {nilai_uts}")
+print(f"• Nilai UAS            : {nilai_uas}")
+print(f"• Persentase Kehadiran : {kehadiran}%")
+print("-" * 40)
+
+# Menghitung nilai akhir berdasarkan bobot masing-masing
+nilai_akhir = (20 * nilai_tugas / 100) + (30 * nilai_uts / 100) + (50 * nilai_uas / 100)
+
+print(f"Nilai Akhir            : {round(nilai_akhir, 2)}")
+print("-" * 40)
+
+# Menentukan status kelulusan secara bertingkat
+if nilai_akhir >= 75 and kehadiran >= 80:
+    if nilai_akhir >= 85 and kehadiran >= 90 and nilai_akhir % 2 == 0:
+        print("Status Akhir           : LULUS DENGAN PREDIKAT")
+    else:
+        print("Status Akhir           : LULUS")
+else:
+    print("Status Akhir           : BELUM LULUS")
+
+print("=" * 40)
